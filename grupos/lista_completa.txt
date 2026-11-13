@@ -1,9 +1,4 @@
-1;Roman Eduardo Uruchurtu Montiel
-3;Alonso Garcia Lopez
-4;Juanito Carlitos Ochoa
-5;Manuel Pablito Ramirez
-6;Juanito Pablito Federico
-7;Camila Cordova
-8;Brandon Alexander Ibarra Aqui
-9;Totoro
-10;Sumo
+1;Roman
+2;Camila
+3;Juan
+4;Pablo

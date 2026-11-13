@@ -10,12 +10,14 @@ from funciones.buscar_alumno import buscar_alumno
 
 import os
 
+# Borrar todo en consola
 def limpiar():
     os.system("cls" if os.name == "nt" else "clear")
 
+# Print para mostrar el menu
 def mostrar_menu():
     print("┌───────────────────────────────────────────┐")
-    print("│            SISTEMA DE ALUMNOS             │")
+    print("│            SISTEMA DE ALUMNOS       [📚️]  │")
     print("├───────────────────────────────────────────┤")
     print("│                             │             │")
     print("│[1] Registrar estudiante     │             │")
@@ -27,7 +29,7 @@ def mostrar_menu():
     print()
 
 
-
+# menu principal
 def menu():
     while True:
         limpiar()
@@ -39,11 +41,14 @@ def menu():
             nombre = input(">> Ingresa el nombre del alumno a registar: ")
 
             for i in range(1,4):
+            
                 calificacion = int(input(f">> Ingresa la calificacion numero ({i}): "))
-                if 100 >= calificacion >= 0:
-                    calificaciones.append(int(calificacion))
-                else: 
-                    print("Ingresa calificaciones validas menores a 100")
+                if not (0 <= calificacion <= 100):
+                    print("Estas ingresando una calificacion invalida. No se enviara el registro.")
+                calificaciones.append(calificacion)
+                    
+            if any(c > 100 or c < 0 for c in calificaciones):
+                continue
                     
 
             if nombre == "":
@@ -89,7 +94,10 @@ def menu():
             print("──────────────────────────────────────────────────────────────")
             promedio = promedio_grupal()
             print(f"👤 -> {len(lista)} alumnos en el grupo {configuracion.grupo_predeterminado}")
-            print("──", "✅️ En regla"if promedio>=promedio_min else "❌️ Promedio bajo","──────────────────────────────────────────")
+            if promedio>=promedio_min:
+                print("──✅️ En regla──────────────────────────────────────────")
+            else:
+                print("❌️ Promedio bajo──────────────────────────────────────────")
             print(f"Promedio general del grupo: {promedio}")
             print("──────────────────────────────────────────────────────────────")
             input("\nEnter para volver...")
