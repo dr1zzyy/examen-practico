@@ -1,5 +1,7 @@
 # Sistema de Alumnos 📚️
 
+```El readme.md lo hice con IA, unicamente el README.md```
+
 Programa de consola escrito en Python para registrar alumnos, guardar sus
 calificaciones y consultar estadísticas de un grupo. Los datos se guardan en
 archivos de texto, así que no necesitas base de datos ni instalar nada extra.
@@ -12,17 +14,6 @@ archivos de texto, así que no necesitas base de datos ni instalar nada extra.
 - Ver estadísticas del grupo: promedio general, cuántos aprobaron y reprobaron,
   y el alumno con el promedio más alto.
 
-## Requisitos
-
-- Python 3.10 o superior.
-
-## Cómo ejecutarlo
-
-Desde la carpeta del proyecto:
-
-```bash
-python main.py
-```
 
 Aparecerá un menú donde eliges una opción escribiendo su número y presionando
 Enter.
